@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Home Decor Data - Professional home maintenance, beauty, and wellness services at your doorstep.">
+    <title>Home Decor Data</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Home Decor <span>Data</span></a>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#how-it-works" class="nav-link">How it Works</a></li>
+                    <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-primary" onclick="openBookingModal()">Book Now</button>
+                <div class="hamburger" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#services" onclick="toggleMobileMenu()">Services</a>
+            <a href="#how-it-works" onclick="toggleMobileMenu()">How it Works</a>
+            <a href="#reviews" onclick="toggleMobileMenu()">Reviews</a>
+            <button class="btn btn-primary" onclick="openBookingModal(); toggleMobileMenu()">Book Now</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Expert Home Services at Your <span class="highlight">Doorstep</span></h1>
+                <p class="hero-subtitle">Experience the best in home maintenance, beauty, and wellness. Verified
+                    professionals, transparent pricing, and quality guaranteed.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg" onclick="location.href='#services'">Explore Services</button>
+                    <button class="btn btn-secondary btn-lg" onclick="openBookingModal()">Book a Professional</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50k+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.8/5</span>
+                        <span class="stat-label">Average Rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2000+</span>
+                        <span class="stat-label">Verified Pros</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Placeholder for Hero Image - Ideally use a real image or a high quality illustration -->
+                <div class="image-placeholder">
+                    <img src="https://images.unsplash.com/photo-1581578731117-104f2a8960fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                        alt="Professional Home Cleaning">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Services Section -->
+        <section id="services" class="section services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-subtitle">Premium home services for your every need</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1: Home Cleaning -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-broom"></i></div>
+                        <h3 class="service-title">Home Cleaning</h3>
+                        <p class="service-desc">Deep cleaning, kitchen cleaning, and bathroom cleaning services.</p>
+                        <div class="service-price">Starts at ₹499</div>
+                        <button class="btn btn-secondary btn-full" onclick="openBookingModal('Home Cleaning')">Book
+                            Now</button>
+                    </div>
+
+                    <!-- Service 2: Appliance Repair -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-tools"></i></div>
+                        <h3 class="service-title">Appliance Repair</h3>
+                        <p class="service-desc">Repair services for AC, Washing Machine, Refrigerator, and more.</p>
+                        <div class="service-price">Starts at ₹299</div>
+                        <button class="btn btn-secondary btn-full" onclick="openBookingModal('Appliance Repair')">Book
+                            Now</button>
+                    </div>
+
+                    <!-- Service 3: Salon & Spa -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-spa"></i></div>
+                        <h3 class="service-title">Salon & Spa</h3>
+                        <p class="service-desc">Hygienic and professional beauty services at your doorstep.</p>
+                        <div class="service-price">Starts at ₹599</div>
+                        <button class="btn btn-secondary btn-full" onclick="openBookingModal('Salon & Spa')">Book
+                            Now</button>
+                    </div>
+
+                    <!-- Service 4: Painting -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+                        <h3 class="service-title">Painting</h3>
+                        <p class="service-desc">House painting services with verified professionals.</p>
+                        <div class="service-price">Consultation Free</div>
+                        <button class="btn btn-secondary btn-full" onclick="openBookingModal('Painting')">Book
+                            Now</button>
+                    </div>
+
+                    <!-- Service 5: Electrician -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                        <h3 class="service-title">Electrician</h3>
+                        <p class="service-desc">Wiring, switch installation, and electrical repairs.</p>
+                        <div class="service-price">Starts at ₹199</div>
+                        <button class="btn btn-secondary btn-full" onclick="openBookingModal('Electrician')">Book
+                            Now</button>
+                    </div>
+
+                    <!-- Service 6: Plumber -->
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-faucet"></i></div>
+                        <h3 class="service-title">Plumber</h3>
+                        <p class="service-desc">Leak repairs, tap installation, and pipe maintenance.</p>
+                        <div class="service-price">Starts at ₹199</div>
+                        <button class="btn btn-secondary btn-full" onclick="openBookingModal('Plumber')">Book
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="section how-it-works-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-subtitle">Get your service done in 3 simple steps</p>
+                </div>
+
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-icon-bg">
+                            <span class="step-number">1</span>
+                            <i class="fas fa-mouse-pointer"></i>
+                        </div>
+                        <h3 class="step-title">Select Service</h3>
+                        <p class="step-desc">Choose from our wide range of services.</p>
+                    </div>
+
+                    <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+
+                    <div class="step-item">
+                        <div class="step-icon-bg">
+                            <span class="step-number">2</span>
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3 class="step-title">Book a Slot</h3>
+                        <p class="step-desc">Pick a convenient date and time slot.</p>
+                    </div>
+
+                    <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+
+                    <div class="step-item">
+                        <div class="step-icon-bg">
+                            <span class="step-number">3</span>
+                            <i class="fas fa-smile-beam"></i>
+                        </div>
+                        <h3 class="step-title">Relax</h3>
+                        <p class="step-desc">Our professional will arrive at your doorstep.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-choose-us" class="section why-choose-us-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose Us</h2>
+                    <p class="section-subtitle">We are committed to providing quality service</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+                        <h3 class="feature-title">Verified Professionals</h3>
+                        <p class="feature-desc">Every professional is background checked and verified for your safety.
+                        </p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-rupee-sign"></i></div>
+                        <h3 class="feature-title">Transparent Pricing</h3>
+                        <p class="feature-desc">Upfront pricing with no hidden charges. Pay only for what you see.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-medal"></i></div>
+                        <h3 class="feature-title">Quality Guarantee</h3>
+                        <p class="feature-desc">If you're not satisfied, we'll ensure the job is redone to perfection.
+                        </p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                        <h3 class="feature-title">24/7 Support</h3>
+                        <p class="feature-desc">Our dedicated support team is always available to assist you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="reviews" class="section testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Customers Say</h2>
+                    <p class="section-subtitle">Trusted by thousands of happy customers</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Excellent service! The cleaner arrived on time and did a fantastic
+                            job. My house is sparkling clean. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Sharma"
+                                class="author-img">
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <span>Home Cleaning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Very professional electrician. Fixed the issue quickly and
+                            explained everything clearly. Good pricing too."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rahul Verma"
+                                class="author-img">
+                            <div class="author-info">
+                                <h4>Rahul Verma</h4>
+                                <span>Electrician</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"Booked a salon session at home. The beautician was polite and the
+                            service was just like a premium salon."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Anjali Gupta"
+                                class="author-img">
+                            <div class="author-info">
+                                <h4>Anjali Gupta</h4>
+                                <span>Salon & Spa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Home Decor <span>Data</span></h3>
+                    <p>Your one-stop solution for all home needs. We connect you with verified professionals for safe
+                        and high-quality services.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#how-it-works">How it Works</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone-alt"></i> +91 123 456 7890</li>
+                        <li><i class="fas fa-envelope"></i> help@homedecordata.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, India</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Home Decor Data. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeBookingModal()">&times;</span>
+            <div class="modal-header">
+                <h2>Book a Service</h2>
+                <p>Fill in the details to schedule your professional.</p>
+            </div>
+
+            <form id="bookingForm" onsubmit="handleBooking(event)">
+                <div class="form-group">
+                    <label for="serviceSelect">Select Service</label>
+                    <select id="serviceSelect" class="form-control" required>
+                        <option value="" disabled selected>Choose a service...</option>
+                        <option value="Home Cleaning">Home Cleaning</option>
+                        <option value="Appliance Repair">Appliance Repair</option>
+                        <option value="Salon & Spa">Salon & Spa</option>
+                        <option value="Painting">Painting</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="Plumber">Plumber</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="bookingDate">Date</label>
+                        <input type="date" id="bookingDate" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bookingTime">Time</label>
+                        <select id="bookingTime" class="form-control" required>
+                            <option value="" disabled selected>Select time...</option>
+                            <option value="09:00 AM">09:00 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="02:00 PM">02:00 PM</option>
+                            <option value="04:00 PM">04:00 PM</option>
+                            <option value="06:00 PM">06:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" class="form-control" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" class="form-control" placeholder="Enter phone number"
+                        pattern="[0-9]{10}" title="Please enter a valid 10-digit number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" class="form-control" rows="3" placeholder="Enter your full address"
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Notification (Hidden by default) -->
+    <div id="notification" class="notification">
+        Booking Confirmed! We will contact you shortly.
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
